@@ -1,7 +1,7 @@
 import "./styles.css";
 import { DataChild } from "./DataChild";
-import Data from "./data.json"; // 追加
-import { DataAddress } from "./DataAddress";
+// import Data from "./data.json"; // 追加
+// import { DataAddress } from "./DataAddress";
 
 export default function App() {
   // const users = [
@@ -19,22 +19,15 @@ export default function App() {
   //     last_name: "Weaver",
   //     avatar: "https://reqres.in/img/faces/2-image.jpg"
   //   },
-  //   {
-  //     id: 3,
-  //     email: "emma.wong@reqres.in",
-  //     first_name: "Emma",
-  //     last_name: "Wong",
-  //     avatar: "https://reqres.in/img/faces/3-image.jpg"
-  //   }
   // ];
 
-  const Datas = Data.data;
+  // const Datas = Data.data;
   // const Email = Data.data.email;
   // const FirstName = Data.data.first_name;
 
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
+      {/* <h1>Hello CodeSandbox</h1>
       <h2>some magic happen!</h2>
       <div>
         <ul>
@@ -44,15 +37,15 @@ export default function App() {
             </li>
           ))}
         </ul>
-      </div>
-
-      {/* DataAddress */}
-      <h2>DataAddress</h2>
-      <DataAddress />
+      </div> */}
 
       {/* DataChild */}
       <h2>DataChild</h2>
       <DataChild />
+
+      {/* DataAddress */}
+      {/* <h2>DataAddress</h2>
+      <DataAddress /> */}
     </div>
   );
 }
