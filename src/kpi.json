@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "name": "業種",
+    "name": "業種別",
     "children": [
       {
-        "title": "製造業",
+        "title": "業種の特徴",
         "items": [
           {
             "id": 2,
@@ -40,7 +40,7 @@
     "name": "販売チャネル",
     "children": [
       {
-        "title": "オンライン",
+        "title": "販売方法の特徴",
         "items": [
           {
             "id": 8,
