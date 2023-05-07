@@ -1,9 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0 0 0.5em 0;
+  padding: 0;
+}
+
+body {
+  color: #234;
+  background-color: dimgray;
+  padding: 2vh 12vw;
+  line-height: 1.75;
+}
+
 .App {
   font-family: "futura", sans-serif;
   font-size: 115%;
+  background-color: lightgray;
+  padding: 2vh 4vw 4vh;
+  border-radius: 1rem;
+  box-shadow: 0 8px 12px #00000066;
   /* text-align: center; */
-  color: #345;
-  padding: 2vh 12vw;
 }
 
 ul {
