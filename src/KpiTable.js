@@ -39,9 +39,9 @@ export const KpiTable = () => {
             parents.map((parent) => (
               <Box key={parent.id}>
                 {parent.children?.map((child, index) => (
-                  <p key={index} onClick={() => handleChildClick(child)}>
+                  <MenuItem key={index} onClick={() => handleChildClick(child)}>
                     {child.title}
-                  </p>
+                  </MenuItem>
                 ))}
               </Box>
             ))}

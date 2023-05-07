@@ -1,30 +1,35 @@
 [
   {
     "id": 1,
-    "name": "parent",
+    "name": "業種",
     "children": [
       {
-        "title": "children-group-1",
+        "title": "製造業",
         "items": [
           {
             "id": 2,
-            "name": "Alice"
+            "name": "自動車",
+            "value": 5000
           },
           {
             "id": 3,
-            "name": "Bob"
+            "name": "家電",
+            "value": 5000
           },
           {
             "id": 4,
-            "name": "Charlie"
+            "name": "食品",
+            "value": 5000
           },
           {
             "id": 5,
-            "name": "David"
+            "name": "化粧品",
+            "value": 5000
           },
           {
             "id": 6,
-            "name": "Eva"
+            "name": "医薬品",
+            "value": 5000
           }
         ]
       }
@@ -32,30 +37,35 @@
   },
   {
     "id": 7,
-    "name": "parent2",
+    "name": "販売チャネル",
     "children": [
       {
-        "title": "children-group-2",
+        "title": "オンライン",
         "items": [
           {
             "id": 8,
-            "name": "Frank"
+            "name": "ECサイト",
+            "value": 5000
           },
           {
             "id": 9,
-            "name": "Grace"
+            "name": "SNS",
+            "value": 5000
           },
           {
             "id": 10,
-            "name": "Hannah"
+            "name": "メールマーケティング",
+            "value": 5000
           },
           {
             "id": 11,
-            "name": "Igor"
+            "name": "アフィリエイト",
+            "value": 5000
           },
           {
             "id": 12,
-            "name": "Jasmine"
+            "name": "広告",
+            "value": 5000
           }
         ]
       }
