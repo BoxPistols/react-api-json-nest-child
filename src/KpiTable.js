@@ -74,7 +74,7 @@ export const KpiTable = () => {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {selectedChild.children?.map((child) => (
+                  {selectedChild.items?.map((child) => (
                     <TableRow key={child.id}>
                       <TableCell>{child.id}</TableCell>
                       <TableCell>{child.name}</TableCell>
