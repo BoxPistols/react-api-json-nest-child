@@ -1,3 +1,8 @@
+# DataChild.js
+
+23-5-7
+
+```js
 import React, { useState, useEffect } from "react";
 import Data from "./child.json"; // JSONファイルをインポートします
 import {
@@ -135,3 +140,63 @@ export const DataChild = () => {
     </>
   );
 };
+```
+
+## child.json
+
+```
+[
+  {
+    "id": 1,
+    "name": "parent1",
+    "children": [
+      {
+        "id": 2,
+        "name": "Alice"
+      },
+      {
+        "id": 3,
+        "name": "Bob"
+      },
+      {
+        "id": 4,
+        "name": "Charlie"
+      },
+      {
+        "id": 5,
+        "name": "David"
+      },
+      {
+        "id": 6,
+        "name": "Eva"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "parent2",
+    "children": [
+      {
+        "id": 8,
+        "name": "Frank"
+      },
+      {
+        "id": 9,
+        "name": "Grace"
+      },
+      {
+        "id": 10,
+        "name": "Hannah"
+      },
+      {
+        "id": 11,
+        "name": "Igor"
+      },
+      {
+        "id": 12,
+        "name": "Jasmine"
+      }
+    ]
+  }
+]
+```
