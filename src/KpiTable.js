@@ -13,8 +13,8 @@ import { Box } from "@mui/system";
 
 export const KpiTable = () => {
   const [parents, setParents] = useState([]);
-  const [selectedParent, setSelectedParent] = useState();
-  const [selectedChild, setSelectedChild] = useState();
+  const [selectedParent, setSelectedParent] = useState(null);
+  const [selectedChild, setSelectedChild] = useState(null);
 
   useEffect(() => {
     setParents(Data);
@@ -24,14 +24,15 @@ export const KpiTable = () => {
     setSelectedChild(child);
   };
 
-  const handleParentSelect = () => {
+  const handleParentSelect = (event) => {
     const parent = parents.find((p) => p.id === Number(event.target.value));
     setSelectedParent(parent ?? null);
+    setSelectedChild(null);
   };
 
   return (
     <>
-      <Box display="flex" gap={2}>
+      <Box display="flex" gap={3}>
         <Box>
           <h3>ネストの子要素のchildrenのListを表示</h3>
           {selectedParent &&
@@ -53,7 +54,7 @@ export const KpiTable = () => {
             onChange={handleParentSelect}
             displayEmpty
           >
-            <option value="">-- 親を選択 --</option>
+            <option value="">-- KPIを選択 --</option>
             {parents.map((parent) => (
               <option key={parent.id} value={parent.id}>
                 {parent.name}
