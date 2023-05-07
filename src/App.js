@@ -1,5 +1,6 @@
 import "./styles.css";
-import { DataChild } from "./DataChild";
+// import { DataChild } from "./DataChild";
+import { KpiTable } from "./KpiTable";
 // import Data from "./data.json"; // 追加
 // import { DataAddress } from "./DataAddress";
 
@@ -40,8 +41,12 @@ export default function App() {
       </div> */}
 
       {/* DataChild */}
-      <h2>DataChild</h2>
-      <DataChild />
+      <h2>KpiTable</h2>
+      <KpiTable />
+
+      {/* DataChild */}
+      {/* <h2>DataChild</h2>
+      <DataChild /> */}
 
       {/* DataAddress */}
       {/* <h2>DataAddress</h2>
