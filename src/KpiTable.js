@@ -14,10 +14,15 @@ import { Box } from "@mui/system";
 export const KpiTable = () => {
   const [parents, setParents] = useState([]);
   const [selectedParent, setSelectedParent] = useState();
+  const [selectedChild, setSelectedChild] = useState();
 
   useEffect(() => {
     setParents(Data);
   }, []);
+
+  const handleChildClick = (child) => {
+    setSelectedChild(child);
+  };
 
   const handleParentSelect = () => {
     const parent = parents.find((p) => p.id === Number(event.target.value));
@@ -26,20 +31,22 @@ export const KpiTable = () => {
 
   return (
     <>
-      <Box display="flex">
-        <div>
+      <Box display="flex" gap={2}>
+        <Box>
           <h3>ネストの子要素のchildrenのListを表示</h3>
-          {parents.map((parent) => (
-            <div key={parent.id}>
-              {parent.children?.map((child, index) => (
-                <p key={index}>{child.title}</p>
-              ))}
-            </div>
-          ))}
-        </div>
-
-        <div>
-          <h3>選択されたParentに応じたテーブル</h3>
+          {selectedParent &&
+            parents.map((parent) => (
+              <Box key={parent.id}>
+                {parent.children?.map((child, index) => (
+                  <p key={index} onClick={() => handleChildClick(child)}>
+                    {child.title}
+                  </p>
+                ))}
+              </Box>
+            ))}
+        </Box>
+        <Box>
+          <h3>選択されたParentとChildに応じたテーブル</h3>
           <Select
             native
             value={selectedParent ? selectedParent.id : ""}
@@ -53,9 +60,11 @@ export const KpiTable = () => {
               </option>
             ))}
           </Select>
-          {selectedParent ? (
+          {selectedChild ? (
             <>
-              <h1>{selectedParent.name}</h1>
+              <h3>
+                {selectedParent.name} - {selectedChild.title}
+              </h3>
               <Table>
                 <TableHead>
                   <TableRow>
@@ -64,7 +73,7 @@ export const KpiTable = () => {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {selectedParent.children?.map((child) => (
+                  {selectedChild.children?.map((child) => (
                     <TableRow key={child.id}>
                       <TableCell>{child.id}</TableCell>
                       <TableCell>{child.name}</TableCell>
@@ -73,6 +82,8 @@ export const KpiTable = () => {
                 </TableBody>
               </Table>
             </>
+          ) : selectedParent ? (
+            <p>子要素を選択してください</p>
           ) : (
             <>
               <Table>
@@ -89,7 +100,7 @@ export const KpiTable = () => {
               </Table>
             </>
           )}
-        </div>
+        </Box>
       </Box>
     </>
   );
