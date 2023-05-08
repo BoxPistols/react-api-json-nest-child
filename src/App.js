@@ -1,6 +1,7 @@
 import "./styles.css";
 // import { DataChild } from "./DataChild";
 import { KpiTable } from "./KpiTable";
+import MarketingDataGenerator from "./MarketingDataGenerator";
 // import Data from "./data.json"; // 追加
 // import { DataAddress } from "./DataAddress";
 
@@ -27,8 +28,9 @@ export default function App() {
   // const FirstName = Data.data.first_name;
 
   return (
-    <div className="App">
-      {/* <h1>Hello CodeSandbox</h1>
+    <>
+      <div className="App">
+        {/* <h1>Hello CodeSandbox</h1>
       <h2>some magic happen!</h2>
       <div>
         <ul>
@@ -40,17 +42,22 @@ export default function App() {
         </ul>
       </div> */}
 
-      {/* DataChild */}
-      <h2>KpiTable</h2>
-      <KpiTable />
+        {/* DataChild */}
+        <h2>KpiTable</h2>
+        <KpiTable />
 
-      {/* DataChild */}
-      {/* <h2>DataChild</h2>
+        {/* DataChild */}
+        {/* <h2>DataChild</h2>
       <DataChild /> */}
 
-      {/* DataAddress */}
-      {/* <h2>DataAddress</h2>
+        {/* DataAddress */}
+        {/* <h2>DataAddress</h2>
       <DataAddress /> */}
-    </div>
+      </div>
+
+      <div className="App">
+        <MarketingDataGenerator />
+      </div>
+    </>
   );
 }
